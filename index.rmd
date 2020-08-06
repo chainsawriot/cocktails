@@ -1,0 +1,17 @@
+---
+title: "Cocktails"
+author: "Chung-hong Chan"
+date: "8/6/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## cocktails
+
+```{r}
+require(tidyverse)
+rio::import("cocktails.csv") %>% select(drink, glass, ingredient, measure) %>% DT::datatable()
+```
